@@ -1,0 +1,54 @@
+.logo-head{
+    width: 70px;
+    margin-left: 30px;
+    transition: 0.5s ease-in-out;
+}
+
+.toggle-button{
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar1, .bar2, .bar3{
+    height: 3px;
+    width: 100%;
+    margin: 2.5px 0;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 960px){
+    .logo-head{
+        margin-left: 10px;
+    }
+    .toggle-button{
+        display: flex;
+        transition: 0.5s ease-in-out;
+    }
+    .bar1.active{
+        transform: rotate(45deg);
+        position: absolute;
+        top: 10px;
+        transition: 0.5s;
+    }
+    .bar2.active{
+        width: 0;
+        background: none;
+        border: none;
+        display: none;
+    }
+    .bar3.active{
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 10px;
+        transition: 0.5s;
+    }
+}
